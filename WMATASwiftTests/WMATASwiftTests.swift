@@ -42,9 +42,21 @@ class WMATASwiftTests: XCTestCase {
     }
     
     func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
+        let wrapper = WMATASwift(apiKey: "6b700f7ea9db408e9745c207da7ca827")
+        let expectation = expectationWithDescription("Get next train")
+        
+        wrapper.getNextTrain("B10", success: { (trains:[Train]) in
+            let t = trains[0]
+            print(t.car, t.destination, t.destinationCode, t.destinationName, t.group, t.line, t.locationName, t.locationCode, t.min)
+            expectation.fulfill()
+            }, failure: { error in
+                XCTFail(error.localizedDescription)
+            })
+        
+        waitForExpectationsWithTimeout(10) { error in
+            if (error != nil) {
+                XCTFail(error!.description)
+            }
         }
     }
     
