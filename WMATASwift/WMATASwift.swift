@@ -12,13 +12,11 @@ import SwiftyJSON
 
 public class WMATASwift {
     
-    internal(set) var apiUrl: NSURL
-    internal(set) var baseUrl: String
     internal(set) var apiKey: String
+    internal(set) var baseUrl: String
     
     public init(apiKey: String) {
         self.apiKey = apiKey
-        self.apiUrl = NSURL(string: "https://api.wmata.com/")!
         self.baseUrl = "https://api.wmata.com/"
     }
     
