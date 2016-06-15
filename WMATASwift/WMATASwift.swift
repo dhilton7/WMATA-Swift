@@ -16,7 +16,7 @@ public class WMATASwift {
     internal(set) var baseUrl: String
     internal(set) var apiKey: String
     
-    init(apiKey: String) {
+    public init(apiKey: String) {
         self.apiKey = apiKey
         self.apiUrl = NSURL(string: "https://api.wmata.com/")!
         self.baseUrl = "https://api.wmata.com/"

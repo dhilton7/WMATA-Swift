@@ -16,6 +16,8 @@
 		9B3A11D71D11C2C2002BF083 /* WMATASwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B3A11D61D11C2C2002BF083 /* WMATASwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B3A11DE1D11C2C2002BF083 /* WMATASwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B3A11D31D11C2C2002BF083 /* WMATASwift.framework */; };
 		9B3A11E31D11C2C2002BF083 /* WMATASwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3A11E21D11C2C2002BF083 /* WMATASwiftTests.swift */; };
+		9BC2DAFC1D11DDE800D8DEF0 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC2DAFB1D11DDE800D8DEF0 /* Line.swift */; };
+		9BC2DB0A1D11E1C500D8DEF0 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC2DB091D11E1C500D8DEF0 /* Station.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		9B3A11DD1D11C2C2002BF083 /* WMATASwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WMATASwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B3A11E21D11C2C2002BF083 /* WMATASwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WMATASwiftTests.swift; sourceTree = "<group>"; };
 		9B3A11E41D11C2C2002BF083 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BC2DAFB1D11DDE800D8DEF0 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		9BC2DB091D11E1C500D8DEF0 /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		9B3A11D51D11C2C2002BF083 /* WMATASwift */ = {
 			isa = PBXGroup;
 			children = (
+				9BC2DAFA1D11DDD600D8DEF0 /* Models */,
 				9B3A11D61D11C2C2002BF083 /* WMATASwift.h */,
 				9B3A11D81D11C2C2002BF083 /* Info.plist */,
 				9B1200211D11C400003E6899 /* WMATASwift.swift */,
@@ -116,6 +121,15 @@
 				9B3A11E41D11C2C2002BF083 /* Info.plist */,
 			);
 			path = WMATASwiftTests;
+			sourceTree = "<group>";
+		};
+		9BC2DAFA1D11DDD600D8DEF0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9BC2DAFB1D11DDE800D8DEF0 /* Line.swift */,
+				9BC2DB091D11E1C500D8DEF0 /* Station.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,7 +260,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BC2DAFC1D11DDE800D8DEF0 /* Line.swift in Sources */,
 				9B1200281D11CA24003E6899 /* WMATARail.swift in Sources */,
+				9BC2DB0A1D11E1C500D8DEF0 /* Station.swift in Sources */,
 				9B1200221D11C400003E6899 /* WMATASwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
