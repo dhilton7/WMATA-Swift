@@ -11,8 +11,8 @@ import SwiftyJSON
 
 public extension WMATASwift {
     
-    public func getNextTrain(stationCode: String?, success: (JSON)->Void, failure:(NSError)->Void) {
-        self.jsonGetRequestWithPath("StationPrediction.svc/json/GetPrediction/\(stationCode ?? "All")", success: success, failure: failure)
+    public func getNextTrain(stationCodes: String?, success: (JSON)->Void, failure:(NSError)->Void) {
+        self.jsonGetRequestWithPath("StationPrediction.svc/json/GetPrediction/\(stationCodes ?? "All")", success: success, failure: failure)
     }
     
     public func getTrainLines(success: ([Line])->Void, failure:(NSError)->Void) {
@@ -28,7 +28,7 @@ public extension WMATASwift {
     }
     
     public func getStopsForLine(lineCode: String?, success: ([Station])->Void, failure:(NSError)->Void) {
-        let path = lineCode == nil ? "Rail.svc/json/jStations" : "Rail.svc/json/jStations?\(lineCode!)"
+        let path = lineCode == nil ? "Rail.svc/json/jStations" : "Rail.svc/json/jStations?LineCode=\(lineCode!)"
         self.jsonGetRequestWithPath(path, success: { (json:JSON) in
             if let stopsJson = json["Stations"].array {
                 var stations = [Station]()
