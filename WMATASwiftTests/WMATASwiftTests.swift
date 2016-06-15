@@ -26,8 +26,8 @@ class WMATASwiftTests: XCTestCase {
         
         let wrapper = WMATASwift(apiKey: "6b700f7ea9db408e9745c207da7ca827")
         let expectation = expectationWithDescription("Get next train")
-
-        wrapper.getNextTrain("B03", success: { (json:JSON) in
+        
+        wrapper.getStopsForLine("GR", success: { (stations:[Station]) in
             expectation.fulfill()
         }) { (error:NSError) in
             XCTFail(error.localizedDescription)
