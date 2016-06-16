@@ -19,7 +19,7 @@ public class Train {
     public var line: String?
     public var locationCode: String?
     public var locationName: String?
-    public var min: Int?
+    public var min: String?
     
     
     init(json:JSON) {
@@ -48,7 +48,22 @@ public class Train {
             self.locationName = ln
         }
         if let m = json["Min"].string {
-            self.min = Int(m)
+            self.min = m
+        }
+    }
+    
+    public func minString() -> String {
+        if min == "ARR" {
+            return "Arriving"
+        }
+        else if min == "BRD" {
+            return "Boarding"
+        }
+        else if let m = Int(min ?? "") {
+            return m > 1 ? "\(m) mins" : "\(m) min"
+        }
+        else {
+            return "Empty"
         }
     }
     

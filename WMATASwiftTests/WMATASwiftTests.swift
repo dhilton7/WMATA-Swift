@@ -47,7 +47,7 @@ class WMATASwiftTests: XCTestCase {
         
         wrapper.getNextTrain("B10", success: { (trains:[Train]) in
             let t = trains[0]
-            print(t.car, t.destination, t.destinationCode, t.destinationName, t.group, t.line, t.locationName, t.locationCode, t.min)
+            print(t.min)
             expectation.fulfill()
             }, failure: { error in
                 XCTFail(error.localizedDescription)
