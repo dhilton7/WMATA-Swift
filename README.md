@@ -1,2 +1,6 @@
 # WMATA-Swift
-Swift wrapper for WMATA API using AFNetworking
+Swift wrapper for WMATA API using Alamofire
+
+
+### Documentation
+Coming soon :)
