@@ -66,5 +66,17 @@ public extension WMATASwift {
             }, failure: failure)
     }
     
+    public func getStationToStationInfo(fromStationCode: String?, toStationCode: String?, success: ([StationToStation])->Void, failure: (NSError)->Void) {
+        self.jsonGetRequestWithPath("Rail.svc/json/jSrcStationToDstStationInfo?FromStationCode=\(fromStationCode ?? "")&ToStationCode=\(toStationCode ?? "")", success: { (json:JSON) in
+            if let infoJson = json["StationToStationInfos"].array {
+                var stationInfos = [StationToStation]()
+                for json in infoJson {
+                    stationInfos.append(StationToStation(json: json))
+                }
+                success(stationInfos)
+            }
+            }, failure: failure)
+    }
+    
     
 }

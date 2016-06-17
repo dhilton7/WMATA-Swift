@@ -95,4 +95,22 @@ class WMATASwiftTests: XCTestCase {
         }
     }
     
+    func testStationToStationInfo() {
+        let expectation = expectationWithDescription("Get station to station information")
+        
+        wrapper.getStationToStationInfo("E10", toStationCode: "J03", success: { (info:[StationToStation]) in
+            let s = info[0]
+            print(s.compositeMiles, s.destinationStation, s.offPeakFare, s.peakFare, s.railTime, s.seniorDisabledFare, s.sourceStation)
+            expectation.fulfill()
+        }) { (error:NSError) in
+                XCTFail(error.localizedDescription)
+        }
+        
+        waitForExpectationsWithTimeout(10) { (error) in
+            if error != nil {
+                XCTFail(error!.localizedDescription)
+            }
+        }
+    }
+    
 }

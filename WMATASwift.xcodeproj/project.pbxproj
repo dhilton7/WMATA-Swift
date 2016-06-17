@@ -17,6 +17,7 @@
 		9B3A11DE1D11C2C2002BF083 /* WMATASwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B3A11D31D11C2C2002BF083 /* WMATASwift.framework */; };
 		9B3A11E31D11C2C2002BF083 /* WMATASwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3A11E21D11C2C2002BF083 /* WMATASwiftTests.swift */; };
 		9B43AD941D144B2800174437 /* RailPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B43AD931D144B2800174437 /* RailPath.swift */; };
+		9B43AD961D144F0100174437 /* StationToStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B43AD951D144F0100174437 /* StationToStation.swift */; };
 		9BC2DAFC1D11DDE800D8DEF0 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC2DAFB1D11DDE800D8DEF0 /* Line.swift */; };
 		9BC2DB0A1D11E1C500D8DEF0 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC2DB091D11E1C500D8DEF0 /* Station.swift */; };
 		9BC2DB161D121E4A00D8DEF0 /* Train.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC2DB151D121E4A00D8DEF0 /* Train.swift */; };
@@ -58,6 +59,7 @@
 		9B3A11E21D11C2C2002BF083 /* WMATASwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WMATASwiftTests.swift; sourceTree = "<group>"; };
 		9B3A11E41D11C2C2002BF083 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B43AD931D144B2800174437 /* RailPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailPath.swift; sourceTree = "<group>"; };
+		9B43AD951D144F0100174437 /* StationToStation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationToStation.swift; sourceTree = "<group>"; };
 		9BC2DAFB1D11DDE800D8DEF0 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		9BC2DB091D11E1C500D8DEF0 /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		9BC2DB151D121E4A00D8DEF0 /* Train.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Train.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				9BC2DB091D11E1C500D8DEF0 /* Station.swift */,
 				9BC2DB151D121E4A00D8DEF0 /* Train.swift */,
 				9B43AD931D144B2800174437 /* RailPath.swift */,
+				9B43AD951D144F0100174437 /* StationToStation.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B43AD961D144F0100174437 /* StationToStation.swift in Sources */,
 				9BC2DAFC1D11DDE800D8DEF0 /* Line.swift in Sources */,
 				9B1200281D11CA24003E6899 /* WMATARail.swift in Sources */,
 				9B43AD941D144B2800174437 /* RailPath.swift in Sources */,
