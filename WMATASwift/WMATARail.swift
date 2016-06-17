@@ -48,5 +48,12 @@ public extension WMATASwift {
             }, failure: failure)
     }
     
+    public func getStationInformation(stationCode: String?, success: (Station)->Void, failure:(NSError)->Void) {
+        self.jsonGetRequestWithPath("Rail.svc/json/jStationInfo?StationCode=\(stationCode ?? "")", success: { (json:JSON) in
+            success(Station(json: json))
+            }, failure: failure)
+    }
+    
+    
     
 }
