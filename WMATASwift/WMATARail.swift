@@ -11,6 +11,11 @@ import SwiftyJSON
 
 public extension WMATASwift {
     
+    /**
+        Get Next Train for a station code
+        
+        - parameter StationCodes- Comma separated list of station codes
+    */
     public func getNextTrain(stationCodes: String?, success: ([Train])->Void, failure:(NSError)->Void) {
         self.jsonGetRequestWithPath("StationPrediction.svc/json/GetPrediction/\(stationCodes ?? "All")", success: { (json:JSON) in
             if let trainJson = json["Trains"].array {
