@@ -11,6 +11,10 @@ import SwiftyJSON
 
 public class Station {
     
+    public var streetAddress: String?
+    public var state: String?
+    public var city: String?
+    public var zip: String?
     public var code: String?
     public var lineCodes: [String]?
     public var name: String?
@@ -18,6 +22,18 @@ public class Station {
     public var latitude: Float?
     
     init(json:JSON) {
+        if let s = json["Address"]["Street"].string {
+            self.streetAddress = s
+        }
+        if let s = json["Address"]["State"].string {
+            self.state = s
+        }
+        if let c = json["Address"]["City"].string {
+            self.city = c
+        }
+        if let z = json["Address"]["Zip"].string {
+            self.zip = z
+        }
         if let c = json["Code"].string {
             self.code = c
         }
