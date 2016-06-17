@@ -77,4 +77,22 @@ class WMATASwiftTests: XCTestCase {
         }
     }
     
+    func testPathBetweenStations() {
+        let expectation = expectationWithDescription("Get path between stations")
+        
+        wrapper.getPathBetweenStations("N06", toStationCode: "G05", success: { (path:[RailPath]) in
+            let p = path[1]
+            print(p.distanceToPrev, p.lineCode, p.seqNum, p.stationCode, p.stationName)
+            expectation.fulfill()
+        }) { (error:NSError) in
+            XCTFail(error.localizedDescription)
+        }
+        
+        waitForExpectationsWithTimeout(10) { error in
+            if error != nil {
+                XCTFail(error!.localizedDescription)
+            }
+        }
+    }
+    
 }

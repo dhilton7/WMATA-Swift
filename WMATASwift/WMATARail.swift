@@ -54,6 +54,17 @@ public extension WMATASwift {
             }, failure: failure)
     }
     
+    public func getPathBetweenStations(fromStationCode: String, toStationCode: String, success: ([RailPath])->Void, failure: (NSError)->Void) {
+        self.jsonGetRequestWithPath("Rail.svc/json/jPath?FromStationCode=\(fromStationCode)&ToStationCode=\(toStationCode)", success: { (json:JSON) in
+            if let pathJson = json["Path"].array {
+                var path = [RailPath]()
+                for json in pathJson {
+                    path.append(RailPath(json: json))
+                }
+                success(path)
+            }
+            }, failure: failure)
+    }
     
     
 }
