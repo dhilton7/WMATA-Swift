@@ -18,8 +18,8 @@ public class Station {
     public var code: String?
     public var lineCodes: [String]?
     public var name: String?
-    public var longitude: Float?
-    public var latitude: Float?
+    public var longitude: Double?
+    public var latitude: Double?
     
     init(json:JSON) {
         if let s = json["Address"]["Street"].string {
@@ -53,10 +53,10 @@ public class Station {
         if let n = json["Name"].string {
             self.name = n
         }
-        if let l = json["Lon"].float {
+        if let l = json["Lon"].double {
             self.longitude = l
         }
-        if let l = json["Lat"].float {
+        if let l = json["Lat"].double {
             self.latitude = l
         }
     }

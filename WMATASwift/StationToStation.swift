@@ -13,11 +13,11 @@ public class StationToStation {
     
     public var sourceStation: String?
     public var destinationStation: String?
-    public var compositeMiles: Float?
+    public var compositeMiles: Double?
     public var railTime: Int?
-    public var peakFare: Float?
-    public var offPeakFare: Float?
-    public var seniorDisabledFare: Float?
+    public var peakFare: Double?
+    public var offPeakFare: Double?
+    public var seniorDisabledFare: Double?
     
     
     init(json:JSON) {
@@ -27,19 +27,19 @@ public class StationToStation {
         if let ds = json["DestinationStation"].string {
             self.destinationStation = ds
         }
-        if let cm = json["CompositeMiles"].float {
+        if let cm = json["CompositeMiles"].double {
             self.compositeMiles = cm
         }
         if let rt = json["RailTime"].int {
             self.railTime = rt
         }
-        if let pf = json["RailFare"]["PeakTime"].float {
+        if let pf = json["RailFare"]["PeakTime"].double {
             self.peakFare = pf
         }
-        if let opf = json["RailFare"]["OffPeakTime"].float {
+        if let opf = json["RailFare"]["OffPeakTime"].double {
             self.offPeakFare = opf
         }
-        if let sdf = json["RailFare"]["SeniorDisabled"].float {
+        if let sdf = json["RailFare"]["SeniorDisabled"].double {
             self.seniorDisabledFare = sdf
         }
     }
