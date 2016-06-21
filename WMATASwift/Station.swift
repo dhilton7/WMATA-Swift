@@ -20,8 +20,10 @@ public class Station {
     public var name: String?
     public var longitude: Double?
     public var latitude: Double?
+    public var stationTogether1: String?
+    public var stationTogether2: String?
     
-    init(json:JSON) {
+    public init(json:JSON) {
         if let s = json["Address"]["Street"].string {
             self.streetAddress = s
         }
@@ -58,6 +60,12 @@ public class Station {
         }
         if let l = json["Lat"].double {
             self.latitude = l
+        }
+        if let st1 = json["StationTogether1"].string {
+            self.stationTogether1 = st1
+        }
+        if let st2 = json["StationTogether2"].string {
+            self.stationTogether2 = st2
         }
     }
     
