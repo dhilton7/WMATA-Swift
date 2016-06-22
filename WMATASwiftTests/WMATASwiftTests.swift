@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class WMATASwiftTests: XCTestCase {
     
-    internal var wrapper = WMATASwift(apiKey: "6b700f7ea9db408e9745c207da7ca827")
+    internal var wrapper = WMATASwift(apiKey: "521835d70aeb4c2e9f9d5fc8f7c6783a")
     
     override func setUp() {
         super.setUp()
