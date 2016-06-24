@@ -22,7 +22,7 @@ public class Train {
     public var min: String?
     
     
-    init(json:JSON) {
+    public init(json:JSON) {
         if let c = json["Car"].string {
             self.car = c
         }
@@ -51,6 +51,8 @@ public class Train {
             self.min = m
         }
     }
+    
+    public init() {}
     
     public func minString() -> String {
         if min == "ARR" {

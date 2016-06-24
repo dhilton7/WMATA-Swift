@@ -17,7 +17,7 @@ public class RailPath {
     public var stationCode: String?
     public var stationName: String?
     
-    init(json: JSON) {
+    public init(json: JSON) {
         if let d = json["DistanceToPrev"].int {
             self.distanceToPrev = d
         }
@@ -34,5 +34,7 @@ public class RailPath {
             self.stationName = sn
         }
     }
+    
+    public init() {}
     
 }

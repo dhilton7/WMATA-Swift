@@ -20,7 +20,7 @@ public class StationToStation {
     public var seniorDisabledFare: Double?
     
     
-    init(json:JSON) {
+    public init(json:JSON) {
         if let ss = json["SourceStation"].string {
             self.sourceStation = ss
         }
@@ -43,4 +43,6 @@ public class StationToStation {
             self.seniorDisabledFare = sdf
         }
     }
+    
+    public init() {}
 }

@@ -19,7 +19,7 @@ public class Line {
     public var lineCode: String?
     
     
-    init(json: JSON) {
+    public init(json: JSON) {
         if let dn = json["DisplayName"].string {
             self.displayName = dn
         }
@@ -39,5 +39,7 @@ public class Line {
             self.lineCode = lc
         }
     }
+    
+    public init() {}
     
 }
